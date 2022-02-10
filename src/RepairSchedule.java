@@ -42,21 +42,16 @@ public class RepairSchedule
     /** Returns an ArrayList containing the mechanic identifiers of all available mechanics,
      * as described in part (b).
      */
-    public ArrayList<Integer> availableMechanics()
-    {
+    public ArrayList<Integer> availableMechanics() {
         ArrayList<Integer> m = new ArrayList<Integer>();
-        for (int i = 0; i < numberOfMechanics; i++)
-        {
+        for (int i = 0; i < numberOfMechanics; i++) {
             boolean f = true;
-            for (CarRepair x : schedule)
-            {
-                if (x.getMechanicNum() == i)
-                {
+            for (CarRepair x : schedule) {
+                if (x.getMechanicNum() == i) {
                     f = false;
                 }
             }
-            if (f == true)
-            {
+            if (f == true) {
                 m.add(i);
             }
         }
